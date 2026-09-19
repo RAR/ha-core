@@ -760,4 +760,124 @@ DISCOVERY_SCHEMAS = [
         required_attributes=(custom_clusters.WagoCluster.Attributes.DirectlyConnected,),
         vendor_id=(5428,),
     ),
+    MatterDiscoverySchema(
+        platform=Platform.SELECT,
+        entity_description=MatterSelectEntityDescription(
+            key="AqaraInstallMode",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="aqara_install_mode",
+            options=["unknown", "side_mount", "top_mount"],
+            device_to_ha={
+                0: "unknown",
+                1: "side_mount",
+                2: "top_mount",
+            }.get,
+            ha_to_device={
+                "unknown": 0,
+                "side_mount": 1,
+                "top_mount": 2,
+            }.get,
+        ),
+        entity_class=MatterAttributeSelectEntity,
+        required_attributes=(
+            custom_clusters.AqaraAmbientSensingConfigurationCluster.Attributes.InstallMode,
+        ),
+        vendor_id=(4447,),
+    ),
+    MatterDiscoverySchema(
+        platform=Platform.SELECT,
+        entity_description=MatterSelectEntityDescription(
+            key="AqaraSideInstall",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="aqara_side_install",
+            options=["unknown", "wall", "left_corner", "right_corner"],
+            device_to_ha={
+                0: "unknown",
+                1: "wall",
+                2: "left_corner",
+                3: "right_corner",
+            }.get,
+            ha_to_device={
+                "unknown": 0,
+                "wall": 1,
+                "left_corner": 2,
+                "right_corner": 3,
+            }.get,
+        ),
+        entity_class=MatterAttributeSelectEntity,
+        required_attributes=(
+            custom_clusters.AqaraAmbientSensingConfigurationCluster.Attributes.SideInstall,
+        ),
+        vendor_id=(4447,),
+    ),
+    MatterDiscoverySchema(
+        platform=Platform.SELECT,
+        entity_description=MatterSelectEntityDescription(
+            key="AqaraCoordinateReverse",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="aqara_coordinate_reverse",
+            options=["disabled", "enabled", "auto"],
+            device_to_ha={
+                0: "disabled",
+                1: "enabled",
+                2: "auto",
+            }.get,
+            ha_to_device={
+                "disabled": 0,
+                "enabled": 1,
+                "auto": 2,
+            }.get,
+        ),
+        entity_class=MatterAttributeSelectEntity,
+        required_attributes=(
+            custom_clusters.AqaraAmbientSensingConfigurationCluster.Attributes.CoordinateReverse,
+        ),
+        vendor_id=(4447,),
+    ),
+    MatterDiscoverySchema(
+        platform=Platform.SELECT,
+        entity_description=MatterSelectEntityDescription(
+            key="AqaraDetectionDirection",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="aqara_detection_direction",
+            options=["omnidirectional", "left_right"],
+            device_to_ha={
+                0: "omnidirectional",
+                1: "left_right",
+            }.get,
+            ha_to_device={
+                "omnidirectional": 0,
+                "left_right": 1,
+            }.get,
+        ),
+        entity_class=MatterAttributeSelectEntity,
+        required_attributes=(
+            custom_clusters.AqaraAmbientSensingConfigurationCluster.Attributes.DetectionDirection,
+        ),
+        vendor_id=(4447,),
+    ),
+    MatterDiscoverySchema(
+        platform=Platform.SELECT,
+        entity_description=MatterSelectEntityDescription(
+            key="AqaraProximityDistanceLevel",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="aqara_proximity_distance_level",
+            options=["far", "medium", "near"],
+            device_to_ha={
+                0: "far",
+                1: "medium",
+                2: "near",
+            }.get,
+            ha_to_device={
+                "far": 0,
+                "medium": 1,
+                "near": 2,
+            }.get,
+        ),
+        entity_class=MatterAttributeSelectEntity,
+        required_attributes=(
+            custom_clusters.AqaraAmbientSensingConfigurationCluster.Attributes.ProximityDistanceLevel,
+        ),
+        vendor_id=(4447,),
+    ),
 ]

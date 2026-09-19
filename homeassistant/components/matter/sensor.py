@@ -9,6 +9,9 @@ from chip.clusters.ClusterObjects import ClusterAttributeDescriptor
 from chip.clusters.Types import Nullable, NullValue
 from matter_server.client.models import device_types
 from matter_server.common.custom_clusters import (
+    AqaraAmbientSensingConfigurationCluster,
+    AqaraOccupantLocationCluster,
+    AqaraRadarSensingUnionCluster,
     DraftElectricalMeasurementCluster,
     EveCluster,
     NeoCluster,
@@ -22,6 +25,7 @@ from homeassistant.components.sensor import (
     SensorStateClass,
 )
 from homeassistant.const import (
+    DEGREE,
     LIGHT_LUX,
     REVOLUTIONS_PER_MINUTE,
     SIGNAL_STRENGTH_DECIBELS_MILLIWATT,
@@ -86,6 +90,24 @@ EVE_CLUSTER_WEATHER_MAP = {
     3: "cloudy",
     6: "rainy",
     14: "stormy",
+}
+
+AQARA_ACTIVITY_STATE_MAP = {
+    0: "unknown",
+    1: "active",
+    2: "still",
+}
+
+AQARA_INSTALL_STATUS_MAP = {
+    0: "level_facing_up",
+    1: "level_tilted_facing_up",
+    2: "level_reverse_tilted_facing_up",
+    3: "side_facing_forward",
+    4: "side_reverse_facing_forward",
+    5: "top_facing_down",
+    6: "tilted_facing_down",
+    7: "reverse_tilted_facing_down",
+    8: "invalid",
 }
 
 OPERATIONAL_STATE_MAP = {
@@ -1743,5 +1765,62 @@ DISCOVERY_SCHEMAS = [
         ),
         entity_class=MatterSensor,
         required_attributes=(clusters.GeneralDiagnostics.Attributes.BootReason,),
+    ),
+    MatterDiscoverySchema(
+        platform=Platform.SENSOR,
+        entity_description=MatterSensorEntityDescription(
+            key="AqaraActivityState",
+            translation_key="aqara_activity_state",
+            device_class=SensorDeviceClass.ENUM,
+            options=list(AQARA_ACTIVITY_STATE_MAP.values()),
+            device_to_ha=AQARA_ACTIVITY_STATE_MAP.get,
+        ),
+        entity_class=MatterSensor,
+        required_attributes=(AqaraOccupantLocationCluster.Attributes.ActivityState,),
+        vendor_id=(4447,),
+    ),
+    MatterDiscoverySchema(
+        platform=Platform.SENSOR,
+        entity_description=MatterSensorEntityDescription(
+            key="AqaraCurrentHumanCount",
+            translation_key="aqara_human_count",
+            state_class=SensorStateClass.MEASUREMENT,
+        ),
+        entity_class=MatterSensor,
+        required_attributes=(
+            AqaraRadarSensingUnionCluster.Attributes.CurrentHumanCount,
+        ),
+        vendor_id=(4447,),
+    ),
+    MatterDiscoverySchema(
+        platform=Platform.SENSOR,
+        entity_description=MatterSensorEntityDescription(
+            key="AqaraInstallStatus",
+            translation_key="aqara_install_status",
+            device_class=SensorDeviceClass.ENUM,
+            entity_category=EntityCategory.DIAGNOSTIC,
+            options=list(AQARA_INSTALL_STATUS_MAP.values()),
+            device_to_ha=AQARA_INSTALL_STATUS_MAP.get,
+        ),
+        entity_class=MatterSensor,
+        required_attributes=(
+            AqaraAmbientSensingConfigurationCluster.Attributes.InstallStatus,
+        ),
+        vendor_id=(4447,),
+    ),
+    MatterDiscoverySchema(
+        platform=Platform.SENSOR,
+        entity_description=MatterSensorEntityDescription(
+            key="AqaraInstallAngle",
+            translation_key="aqara_install_angle",
+            entity_category=EntityCategory.DIAGNOSTIC,
+            native_unit_of_measurement=DEGREE,
+            state_class=SensorStateClass.MEASUREMENT,
+        ),
+        entity_class=MatterSensor,
+        required_attributes=(
+            AqaraAmbientSensingConfigurationCluster.Attributes.InstallAngle,
+        ),
+        vendor_id=(4447,),
     ),
 ]

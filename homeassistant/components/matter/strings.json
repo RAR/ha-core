@@ -228,6 +228,9 @@
       "altitude": {
         "name": "Altitude above sea level"
       },
+      "aqara_install_height": {
+        "name": "Install height"
+      },
       "auto_relock_timer": {
         "name": "Auto-relock time"
       },
@@ -302,6 +305,46 @@
       }
     },
     "select": {
+      "aqara_coordinate_reverse": {
+        "name": "Coordinate reverse",
+        "state": {
+          "disabled": "[%key:common::state::disabled%]",
+          "enabled": "[%key:common::state::enabled%]",
+          "auto": "[%key:common::state::auto%]"
+        }
+      },
+      "aqara_detection_direction": {
+        "name": "Detection direction",
+        "state": {
+          "omnidirectional": "Omnidirectional",
+          "left_right": "Left/right"
+        }
+      },
+      "aqara_install_mode": {
+        "name": "Install mode",
+        "state": {
+          "unknown": "Unknown",
+          "side_mount": "Side mount",
+          "top_mount": "Top mount"
+        }
+      },
+      "aqara_proximity_distance_level": {
+        "name": "Proximity distance level",
+        "state": {
+          "far": "Far",
+          "medium": "Medium",
+          "near": "Near"
+        }
+      },
+      "aqara_side_install": {
+        "name": "Side install position",
+        "state": {
+          "unknown": "Unknown",
+          "wall": "Wall",
+          "left_corner": "Left corner",
+          "right_corner": "Right corner"
+        }
+      },
       "clean_mode": {
         "name": "Clean mode"
       },
@@ -418,6 +461,34 @@
       },
       "apparent_current": {
         "name": "Apparent current"
+      },
+      "aqara_activity_state": {
+        "name": "Activity state",
+        "state": {
+          "unknown": "Unknown",
+          "active": "Active",
+          "still": "Still"
+        }
+      },
+      "aqara_human_count": {
+        "name": "Human count"
+      },
+      "aqara_install_angle": {
+        "name": "Install angle"
+      },
+      "aqara_install_status": {
+        "name": "Install status",
+        "state": {
+          "level_facing_up": "Level, facing up",
+          "level_tilted_facing_up": "Level, tilted facing up",
+          "level_reverse_tilted_facing_up": "Level, reverse tilted facing up",
+          "side_facing_forward": "Side, facing forward",
+          "side_reverse_facing_forward": "Side, reverse facing forward",
+          "top_facing_down": "Top, facing down",
+          "tilted_facing_down": "Tilted, facing down",
+          "reverse_tilted_facing_down": "Reverse tilted, facing down",
+          "invalid": "Invalid"
+        }
       },
       "auto_close_time": {
         "name": "Auto-close time"
@@ -690,6 +761,9 @@
       }
     },
     "switch": {
+      "aqara_human_count_detection": {
+        "name": "Human count detection"
+      },
       "audible_alarm_enabled": {
         "name": "Audible alarm enabled"
       },

@@ -99,6 +99,56 @@
     'state': 'on',
   })
 # ---
+# name: test_switches[aqara_presence_fp400][switch.aqara_spatial_multi_sensor_fp400_human_count_detection-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': None,
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'switch',
+    'entity_category': <EntityCategory.CONFIG: 'config'>,
+    'entity_id': 'switch.aqara_spatial_multi_sensor_fp400_human_count_detection',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Human count detection',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'Human count detection',
+    'platform': 'matter',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'aqara_human_count_detection',
+    'unique_id': '00000000000004D2-0000000000000078-MatterNodeDevice-1-AqaraEnableHumanCountDetection-291503114-35',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_switches[aqara_presence_fp400][switch.aqara_spatial_multi_sensor_fp400_human_count_detection-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'Aqara Spatial Multi-Sensor FP400 Human count detection',
+    }),
+    'context': <ANY>,
+    'entity_id': 'switch.aqara_spatial_multi_sensor_fp400_human_count_detection',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'off',
+  })
+# ---
 # name: test_switches[aqara_u200][switch.aqara_smart_lock_u200_one_touch_locking-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([

@@ -24,6 +24,7 @@ FIXTURES = [
     "aqara_motion_p2",
     "aqara_multi_state_p100",
     "aqara_presence_fp300",
+    "aqara_presence_fp400",
     "aqara_sensor_w100",
     "aqara_shutter_switch_h2",
     "aqara_thermostat_w500",

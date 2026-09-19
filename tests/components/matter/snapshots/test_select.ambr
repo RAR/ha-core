@@ -1,4 +1,309 @@
 # serializer version: 1
+# name: test_selects[aqara_presence_fp400][select.aqara_spatial_multi_sensor_fp400_coordinate_reverse-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SelectEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'disabled',
+        'enabled',
+        'auto',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'select',
+    'entity_category': <EntityCategory.CONFIG: 'config'>,
+    'entity_id': 'select.aqara_spatial_multi_sensor_fp400_coordinate_reverse',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Coordinate reverse',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'Coordinate reverse',
+    'platform': 'matter',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'aqara_coordinate_reverse',
+    'unique_id': '00000000000004D2-0000000000000078-MatterNodeDevice-1-AqaraCoordinateReverse-291503114-45',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_selects[aqara_presence_fp400][select.aqara_spatial_multi_sensor_fp400_coordinate_reverse-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'Aqara Spatial Multi-Sensor FP400 Coordinate reverse',
+      <SelectEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'disabled',
+        'enabled',
+        'auto',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'select.aqara_spatial_multi_sensor_fp400_coordinate_reverse',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'auto',
+  })
+# ---
+# name: test_selects[aqara_presence_fp400][select.aqara_spatial_multi_sensor_fp400_detection_direction-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SelectEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'omnidirectional',
+        'left_right',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'select',
+    'entity_category': <EntityCategory.CONFIG: 'config'>,
+    'entity_id': 'select.aqara_spatial_multi_sensor_fp400_detection_direction',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Detection direction',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'Detection direction',
+    'platform': 'matter',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'aqara_detection_direction',
+    'unique_id': '00000000000004D2-0000000000000078-MatterNodeDevice-1-AqaraDetectionDirection-291503114-46',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_selects[aqara_presence_fp400][select.aqara_spatial_multi_sensor_fp400_detection_direction-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'Aqara Spatial Multi-Sensor FP400 Detection direction',
+      <SelectEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'omnidirectional',
+        'left_right',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'select.aqara_spatial_multi_sensor_fp400_detection_direction',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'omnidirectional',
+  })
+# ---
+# name: test_selects[aqara_presence_fp400][select.aqara_spatial_multi_sensor_fp400_install_mode-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SelectEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'unknown',
+        'side_mount',
+        'top_mount',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'select',
+    'entity_category': <EntityCategory.CONFIG: 'config'>,
+    'entity_id': 'select.aqara_spatial_multi_sensor_fp400_install_mode',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Install mode',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'Install mode',
+    'platform': 'matter',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'aqara_install_mode',
+    'unique_id': '00000000000004D2-0000000000000078-MatterNodeDevice-1-AqaraInstallMode-291503114-0',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_selects[aqara_presence_fp400][select.aqara_spatial_multi_sensor_fp400_install_mode-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'Aqara Spatial Multi-Sensor FP400 Install mode',
+      <SelectEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'unknown',
+        'side_mount',
+        'top_mount',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'select.aqara_spatial_multi_sensor_fp400_install_mode',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'side_mount',
+  })
+# ---
+# name: test_selects[aqara_presence_fp400][select.aqara_spatial_multi_sensor_fp400_proximity_distance_level-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SelectEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'far',
+        'medium',
+        'near',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'select',
+    'entity_category': <EntityCategory.CONFIG: 'config'>,
+    'entity_id': 'select.aqara_spatial_multi_sensor_fp400_proximity_distance_level',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Proximity distance level',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'Proximity distance level',
+    'platform': 'matter',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'aqara_proximity_distance_level',
+    'unique_id': '00000000000004D2-0000000000000078-MatterNodeDevice-1-AqaraProximityDistanceLevel-291503114-47',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_selects[aqara_presence_fp400][select.aqara_spatial_multi_sensor_fp400_proximity_distance_level-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'Aqara Spatial Multi-Sensor FP400 Proximity distance level',
+      <SelectEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'far',
+        'medium',
+        'near',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'select.aqara_spatial_multi_sensor_fp400_proximity_distance_level',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'medium',
+  })
+# ---
+# name: test_selects[aqara_presence_fp400][select.aqara_spatial_multi_sensor_fp400_side_install_position-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SelectEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'unknown',
+        'wall',
+        'left_corner',
+        'right_corner',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'select',
+    'entity_category': <EntityCategory.CONFIG: 'config'>,
+    'entity_id': 'select.aqara_spatial_multi_sensor_fp400_side_install_position',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Side install position',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'Side install position',
+    'platform': 'matter',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'aqara_side_install',
+    'unique_id': '00000000000004D2-0000000000000078-MatterNodeDevice-1-AqaraSideInstall-291503114-2',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_selects[aqara_presence_fp400][select.aqara_spatial_multi_sensor_fp400_side_install_position-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'Aqara Spatial Multi-Sensor FP400 Side install position',
+      <SelectEntityCapabilityAttribute.OPTIONS: 'options'>: list([
+        'unknown',
+        'wall',
+        'left_corner',
+        'right_corner',
+      ]),
+    }),
+    'context': <ANY>,
+    'entity_id': 'select.aqara_spatial_multi_sensor_fp400_side_install_position',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'wall',
+  })
+# ---
 # name: test_selects[aqara_thermostat_w500][select.floor_heating_thermostat_temperature_display_mode-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([

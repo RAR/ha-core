@@ -499,4 +499,17 @@ DISCOVERY_SCHEMAS = [
         featuremap_contains=BOOLEAN_STATE_CONFIGURATION_FEATURE_AUDIBLE,
         allow_multi=True,
     ),
+    MatterDiscoverySchema(
+        platform=Platform.SWITCH,
+        entity_description=MatterNumericSwitchEntityDescription(
+            key="AqaraEnableHumanCountDetection",
+            entity_category=EntityCategory.CONFIG,
+            translation_key="aqara_human_count_detection",
+        ),
+        entity_class=MatterNumericSwitch,
+        required_attributes=(
+            clusters.AqaraAmbientSensingConfigurationCluster.Attributes.EnableHumanCountDetection,
+        ),
+        vendor_id=(4447,),
+    ),
 ]

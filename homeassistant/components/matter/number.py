@@ -716,4 +716,23 @@ DISCOVERY_SCHEMAS = [
         required_attributes=(clusters.WindowCovering.Attributes.WagoSlatRotationTime,),
         vendor_id=(5428,),
     ),
+    MatterDiscoverySchema(
+        platform=Platform.NUMBER,
+        entity_description=MatterRangeNumberEntityDescription(
+            key="AqaraInstallHeight",
+            device_class=NumberDeviceClass.DISTANCE,
+            entity_category=EntityCategory.CONFIG,
+            translation_key="aqara_install_height",
+            native_unit_of_measurement=UnitOfLength.MILLIMETERS,
+            min_attribute=custom_clusters.AqaraAmbientSensingConfigurationCluster.Attributes.InstallHeightMin,
+            max_attribute=custom_clusters.AqaraAmbientSensingConfigurationCluster.Attributes.InstallHeightMax,
+            native_step=10,
+            mode=NumberMode.BOX,
+        ),
+        entity_class=MatterRangeNumber,
+        required_attributes=(
+            custom_clusters.AqaraAmbientSensingConfigurationCluster.Attributes.InstallHeight,
+        ),
+        vendor_id=(4447,),
+    ),
 ]
